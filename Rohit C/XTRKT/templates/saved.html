@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XTRKT丨Rohit C</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            font-family: 'Courier New', monospace;
+            background: whitesmoke;
+        }
+        
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 20%;
+            background: white;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        }
+        
+        header h1{
+            font-size: 80px;
+        }
+
+        form{
+            width: 100%;
+            height: 80%;
+        }
+
+        .content{
+            width: 100%;
+            height: 80%;
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+
+        .content textarea{
+            height: 100%;
+            border: 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        table{
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+
+        .head1,.head2,.head3,.head4,.head5,.head6,.head7,.head8,.head9,.head10,.head11,.head12,.head13,.head14,.head15,.head16,.head17,.head18{
+            border-right: 1px solid white;
+            border-collapse: collapse;
+            font-size: 20px;
+            background: #323232;
+            color: white;
+            width: 50%;
+        }
+
+        .head19{
+            border-collapse: collapse;
+            font-size: 20px;
+            background: #323232;
+            color: white;
+            width: 50%;
+        }
+
+        .col1,.col2,.col3,.col4,.col5,.col6,.col7,.col8,.col9,.col10,.col11,.col12,.col13,.col14,.col15,.col16,.col17,.col18,.col19{
+            border: 1px solid black;
+            border-collapse: collapse;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+            text-align: center;
+        }
+
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 10%;
+            background: white;
+            font-size: small;
+            font-weight: lighter;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>XTRKT</h1>
+    </header>
+    <form method="post" action="save">
+        {% csrf_token %}
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                    <th class="head1">S No.</th>
+                    <th class="head2">Title</th>
+                    <th class="head3">Year</th>
+                    <th class="head4">Journal</th>
+                    <th class="head5">Authors</th>
+                    <th class="head6">Genre</th>
+                    <th class="head7">Description</th>
+                    <th class="head8">Constructs</th>
+                    <th class="head9">Perspectives</th>
+                    <th class="head10">Context</th>
+                    <th class="head11">Study</th>
+                    <th class="head12">Levels</th>
+                    <th class="head13">Notes</th>
+                    <th class="head14">Findings</th>
+                    <th class="head15">Summary</th>
+                    <th class="head16">Insights</th>
+                    <th class="head17">Points</th>
+                    <th class="head18">Use</th>
+                    <th class="head19">Additional</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in response %}
+                    <tr>
+                        <td class="col1">
+                            <textarea name="id" readonly>{{entry.id}}</textarea>
+                        </td>
+                        <td class="col2">
+                            <textarea name="title" readonly>{{entry.title}}</textarea>
+                        </td>
+                        <td class="col3">
+                            <textarea name="year" readonly>{{entry.year}}</textarea>
+                        </td>
+                        <td class="col4">
+                            <textarea name="journal" readonly>{{entry.journal}}</textarea>
+                        </td>
+                        <td class="col5">
+                            <textarea name="authors" readonly>{{entry.authors}}</textarea>
+                        </td>
+                        <td class="col6">
+                            <textarea name="genre" readonly>{{entry.genre}}</textarea>
+                        </td>
+                        <td class="col7">
+                            <textarea name="description" readonly>{{entry.description}}</textarea>
+                        </td>
+                        <td class="col8">
+                            <textarea name="constructs" readonly>{{entry.constructs}}</textarea>
+                        </td>
+                        <td class="col9">
+                            <textarea name="perspectives" readonly>{{entry.perspectives}}</textarea>
+                        </td>
+                        <td class="col10">
+                            <textarea name="context" readonly>{{entry.context}}</textarea>
+                        </td>
+                        <td class="col11">
+                            <textarea name="study" readonly>{{entry.study}}</textarea>
+                        </td>
+                        <td class="col12">
+                            <textarea name="levels" readonly>{{entry.levels}}</textarea>
+                        </td>
+                        <td class="col13">
+                            <textarea name="notes" readonly>{{entry.notes}}</textarea>
+                        </td>
+                        <td class="col14">
+                            <textarea name="findings" readonly>{{entry.findings}}</textarea>
+                        </td>
+                        <td class="col15">
+                            <textarea name="summary" readonly>{{entry.summary}}</textarea>
+                        </td>
+                        <td class="col16">
+                            <textarea name="insights" readonly>{{entry.insights}}</textarea>
+                        </td>
+                        <td class="col17">
+                            <textarea name="points" readonly>{{entry.points}}</textarea>
+                        </td>
+                        <td class="col18">
+                            <textarea name="use" readonly>{{entry.use}}</textarea>
+                        </td>
+                        <td class="col19">
+                            <textarea name="additional" readonly>{{entry.additional}}</textarea>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </form>
+    <footer>
+        <p>Designed and Developed by Rohit C</p>
+    </footer>
+</body>
+</html>
