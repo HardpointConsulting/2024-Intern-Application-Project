@@ -1,0 +1,99 @@
+ 
+Virtual assistant for the visually impaired 
+Vinayak Iyer  
+Department of Information Technology 
+Sardar Patel Institute of Technology 
+Mumbai, India 
+vinayak.iyer@spit.ac.in 
+Sahil Sheth  
+Department of Information Technology 
+Sardar Patel Institute of Technology 
+Mumbai, India 
+sahil.sheth@spit.ac.in 
+ Kshitij Shah  
+Department of Information Technology 
+Sardar Patel Institute of Technology 
+Mumbai, India 
+kshitij.shah@spit.ac.in 
+Kailas Devadkar  
+Department of Information Technology 
+Sardar Patel Institute of Technology 
+Mumbai, India 
+kailas_devadkar@spit.ac.in 
+ 
+Abstract—Research shows that people with visual 
+impairments are 31% less likely to access the internet than 
+individuals without disabilities. This paper illustrates the 
+implementation of software that provides assistance to the 
+visually impaired for accessing the internet. The software shall 
+prove instrumental in the way the internet has accessed and will 
+increase the ease of use drastically. Although technology has 
+grown leaps and bounds, the internet - especially websites are 
+still inaccessible by the visually impaired. The software provides 
+a way to interact with these websites with much ease. With the 
+use of voice commands instead of the traditional keyboard and 
+mouse, our software provides a new dimension to access and 
+provide commands to any website. The software will read out the 
+content of the website and then using speech to text and text to 
+speech modules along with selenium, our software can automate 
+any website. The user is free from remembering complex braille 
+keyboard commands or the hassle of typing, he/she can simply 
+voice out his/her command and the software will execute it. The 
+system also has the functionality of providing a summary of the 
+content on the website and answering questions asked by the user 
+with reference to the summary using a BERT model trained on 
+the Stanford Question Answer Dataset. This software will 
+revolutionize the internet and pave the way for Web3.0.  
+Keywords — Visually impaired; Voice control; automate 
+website; blind people  
+I.  INTRODUCTION  
+Today there are nearly 285 million people in the world that 
+are visually impaired [12]. Although technology has grown 
+leaps and bounds, the accessibility, especially that of the 
+internet for differently-abled people is still far-fetched. In this 
+modern world, more and more things can be performed online. 
+From shopping, ordering food, to booking train tickets 
+everything can be done online. For almost all of these online 
+facilities a person has to use a website. Using a website can be 
+a trivial task for most people but it is very difficult for visually 
+impaired people. The internet is a highly visual form of 
+communication, different "accessibility blockers" can hinder 
+different types of websites, unlike brick and mortar businesses where accessibility can be made by including a ramp for 
+wheelchairs or braille interfaces. For example, researchers 
+found that 80% of news sites “had significant accessibility 
+issues," while 70% of respondents said they were “unable to 
+access information and services through governmen t 
+websites.” Thus, wanted to come up with a unique way of 
+allowing visually impaired people to access the internet. 
+Although the W3C has a set of recommendations that stipulate 
+the rules to be followed when designing a website for the 
+visually impaired, not all websites necessarily stick to the high 
+standards in terms of accessibility.   
+The major challenge in developing a stable software is to 
+include as few keystrokes as possible and to provide an end to 
+end experience with the help of voice alone. The inclusion of 
+multiple languages and setting the right pace of the speech 
+when played back to the user are important factors to consider. 
+To support the widespread usage of the software, a crucial 
+parameter is the dependency of the software on the local 
+environment and operating systems. While the tech has 
+evolved greatly, the accessibility, especially the internet for 
+the differently abled is still stagnant. 
+Assistive technologies such as a screen reader or 
+magnifiers can enable visually impaired individuals to access 
+the internet. Unfortunately, these screen readers need to keep 
+the functionality of the website in mind otherwise it becomes 
+difficult to read data from the website. Some of the screen 
+readers work only with a particular kind of browser and some 
+require the user to remember complex commands thus screen 
+readers are not an effective solution to the problem at hand 
+and cannot be used to access the internet. 
+ There are the following two common themes visible in 
+most websites: 
+1. Web pages are partially accessible. Some parts are 
+usable for the visually impaired, while others are not. 
+2. The accessibility of some web pages regressed due to 
+updates on the web site. Proceedings of the Fifth International Conference on Communication and Electronics Systems (ICCES 2020)
+IEEE Conference Record # 48766; IEEE Xplore ISBN: 978-1-7281-5371-1
+978-1-7281-5371-1/20/$31.00 ©2020 IEEE 1057
+Authorized licensed use limited to: Western Sydney University. Downloaded on July 26,2020 at 05:06:57 UTC from IEEE Xplore.  Restrictions apply. 
