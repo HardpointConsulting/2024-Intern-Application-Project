@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XTRKT丨Rohit C</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            font-family: 'Courier New', monospace;
+            background: whitesmoke;
+        }
+        
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 20%;
+            background: white;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        }
+        
+        header h1{
+            font-size: 80px;
+        }
+
+        .content{
+            width: 100%;
+            height: 70%;
+        }
+
+        .saved{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50%;
+            font-size: xx-large;
+        }
+
+        .down{
+            width: 100%;
+            height: 50%;
+            text-decoration: none;
+        }
+
+        .submit{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            height: 50%;
+        }
+
+        .submit button{
+            width: 15%;
+            height: 25%;
+            background: black;
+            color: white;
+            font-size: large;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+            border: 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .submit button:hover{
+            cursor: pointer;
+            background: #323232;
+        }
+
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 10%;
+            background: white;
+            font-size: small;
+            font-weight: lighter;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>XTRKT</h1>
+    </header>
+    <div class="content">
+        <div class="saved">
+            <p>Generated excel sheet</p>
+        </div>
+        <a href="media/excel/xtrkt.xlsx" class="down">
+            <div class="submit">
+                <button>Download</button>
+            </div>
+        </a>
+    </div>
+    <footer>
+        <p>Designed and Developed by Rohit C</p>
+    </footer>
+</body>
+</html>
