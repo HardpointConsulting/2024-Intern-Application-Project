@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardpoint</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 20%;
+            background: black;
+            color: white;
+        }
+        
+        header h1{
+            font-size: 80px;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .head1{
+            border-right: 1px solid white;
+            border-collapse: collapse;
+            font-size: 20px;
+            background: #323232;
+            color: white;
+            width: 10%;
+        }
+
+        .head{
+            border-right: 1px solid white;
+            border-collapse: collapse;
+            font-size: 20px;
+            background: #323232;
+            color: white;
+            width: 30%;
+        }
+
+        .head2{
+            border: 0;
+        }
+
+        .col{
+            border: 1px solid black;
+            border-collapse: collapse;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Titlr v2</h1>
+    </header>
+    <table>
+        <thead>       
+          <tr>
+            <th class="head1">S No.</th>
+            <th class="head">Title</th>
+            <th class="head">Year</th>
+            <th class="head">Journal</th>
+            <th class="head">Authors</th>
+            <th class="head">Description</th>
+            <th class="head">Constructs</th>
+            <th class="head">Context</th>
+            <th class="head">Study</th>
+            <th class="head">Level</th>
+            <th class="head">Findings</th>
+            <th class="head2 head">Summary</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for entry in response %}
+            <tr>
+              <td class="col">{{ entry.id }}</td>
+              <td class="col">{{ entry.title }}</td>
+              <td class="col">{{ entry.year }}</td>
+              <td class="col">{{ entry.journal }}</td>
+              <td class="col">{{ entry.authors }}</td>
+              <td class="col">{{ entry.description }}</td>
+              <td class="col">{{ entry.constructs }}</td>
+              <td class="col">{{ entry.context }}</td>
+              <td class="col">{{ entry.study }}</td>
+              <td class="col">{{ entry.level }}</td>
+              <td class="col">{{ entry.findings }}</td>
+              <td class="col">{{ entry.summary }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</body>
+</html>
